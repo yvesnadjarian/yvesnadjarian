@@ -63,7 +63,7 @@ I enjoy building scalable systems, developing intelligent models, and optimizing
 
 ## 🔗 Connect with Me
 - 💼 [LinkedIn](https://www.linkedin.com/in/yves-nadjarian)  
-- 💻 [GitHub](https://github.com/yvesnadjarian)  
+ 
 - ✉️ [Email](mailto:yves.nadjarian@gmail.com)
 
 ---
