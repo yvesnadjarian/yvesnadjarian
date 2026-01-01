@@ -2,93 +2,152 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yves Nadjarian | Data, BI & AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Yves Nadjarian | Data • BI • AI</title>
+  <meta name="description" content="Data Scientist & BI Analyst focado em Analytics, Machine Learning e Automação." />
+
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<header class="header">
-  <div class="container header-content">
-    <span class="logo">YN</span>
-    <nav>
-      <button type="button" class="lang-btn" data-lang="pt">PT</button>
-      <button type="button" class="lang-btn" data-lang="en">EN</button>
-    </nav>
-  </div>
-</header>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">Yves Nadjarian</div>
 
-<section class="hero container reveal">
-  <h1>Yves Nadjarian</h1>
-  <h2 data-i18n="title">Data Scientist & Business Intelligence Analyst</h2>
-  <p data-i18n="summary">
-    Cientista de Dados focado em BI, Machine Learning, IA e automação.
-  </p>
-
-  <div class="hero-actions">
-    <a class="btn primary" href="https://github.com/yvesnadjarian" target="_blank">GitHub</a>
-    <a class="btn outline" href="https://www.linkedin.com/in/yves-nadjarian" target="_blank">LinkedIn</a>
-  </div>
-</section>
-
-<section class="section container reveal">
-  <h3 data-i18n="expTitle">Experiência Profissional</h3>
-
-  <div class="timeline">
-
-    <div class="card">
-      <h4>Sales Planner / Data Scientist — Fast Shop (2022–2025)</h4>
-      <ul>
-        <li data-i18n="fast1">Desenvolvimento de dashboards em Power BI utilizando DAX avançado.</li>
-        <li data-i18n="fast2">Análise de dados de vendas com Machine Learning (Linear Regression, K-Means).</li>
-        <li data-i18n="fast3">Aplicação de análise de reviews em áudio com transcrição e classificação automática.</li>
-        <li data-i18n="fast4">Web scraping de dados do varejo utilizando Selenium.</li>
-      </ul>
+      <nav class="nav">
+        <button type="button" class="lang-btn" data-lang="pt">PT</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </nav>
     </div>
+  </header>
 
-    <div class="card">
-      <h4>Senior BI Analyst — Janssen Brasil (2021)</h4>
-      <ul>
-        <li data-i18n="janssen1">Criação de dashboards no Qlik Sense com foco estratégico.</li>
-        <li data-i18n="janssen2">Tradução de necessidades do negócio em visualizações analíticas.</li>
-      </ul>
+  <!-- HERO -->
+  <section class="hero reveal">
+    <div class="container">
+      <h1 data-i18n="title">
+        Data Scientist & Business Intelligence Analyst
+      </h1>
+      <p class="hero-subtitle" data-i18n="summary">
+        Cientista de Dados focado em BI, Machine Learning, IA e automação.
+      </p>
     </div>
+  </section>
 
-    <div class="card">
-      <h4>Generalist Programmer — Bombril (2019–2021)</h4>
-      <ul>
-        <li data-i18n="bombril1">Recrutado por ex-gestor devido a alto desempenho anterior.</li>
-        <li data-i18n="bombril2">Automação SAP R/3 em larga escala.</li>
-        <li data-i18n="bombril3">Redução do ciclo de atualização de relatórios de semanas para horas.</li>
-      </ul>
+  <!-- EXPERIENCE -->
+  <section class="section">
+    <div class="container">
+
+      <h2 class="section-title reveal" data-i18n="expTitle">
+        Experiência Profissional
+      </h2>
+
+      <!-- FAST SHOP -->
+      <article class="experience reveal">
+        <h3>FAST SHOP S.A.</h3>
+        <span class="role">Data Scientist</span>
+
+        <ul>
+          <li data-i18n="fast1">
+            Desenvolvimento de dashboards em Power BI utilizando DAX avançado.
+          </li>
+          <li data-i18n="fast2">
+            Análise de dados de vendas com Machine Learning.
+          </li>
+          <li data-i18n="fast3">
+            Análise de reviews em áudio com transcrição automática.
+          </li>
+          <li data-i18n="fast4">
+            Web scraping de dados do varejo com Selenium.
+          </li>
+        </ul>
+      </article>
+
+      <!-- JANSSEN -->
+      <article class="experience reveal">
+        <h3>JANSSEN (Johnson & Johnson)</h3>
+        <span class="role">BI Analyst</span>
+
+        <ul>
+          <li data-i18n="janssen1">
+            Criação de dashboards no Qlik Sense.
+          </li>
+          <li data-i18n="janssen2">
+            Tradução de necessidades do negócio em análises visuais.
+          </li>
+        </ul>
+      </article>
+
+      <!-- BOMBRIL -->
+      <article class="experience reveal">
+        <h3>BOMBRIL S.A.</h3>
+        <span class="role">BI Analyst</span>
+
+        <ul>
+          <li data-i18n="bombril1">
+            Recrutado por ex-gestor devido a alto desempenho.
+          </li>
+          <li data-i18n="bombril2">
+            Automação SAP R/3 em larga escala.
+          </li>
+          <li data-i18n="bombril3">
+            Redução do tempo de atualização de relatórios.
+          </li>
+        </ul>
+      </article>
+
+      <!-- COCA-COLA -->
+      <article class="experience reveal">
+        <h3>COCA-COLA FEMSA</h3>
+        <span class="role">BI Analyst</span>
+
+        <ul>
+          <li data-i18n="coke1">
+            Automação SAP R/3 utilizando VBA.
+          </li>
+          <li data-i18n="coke2">
+            Modelos NLP em Python para classificação de texto.
+          </li>
+          <li data-i18n="coke3">
+            Integração de dados com Power BI.
+          </li>
+        </ul>
+      </article>
+
+      <!-- DUPONT -->
+      <article class="experience reveal">
+        <h3>DUPONT</h3>
+        <span class="role">BI Analyst</span>
+
+        <ul>
+          <li data-i18n="dupont1">
+            Análise e manutenção de dados SAP R/3.
+          </li>
+          <li data-i18n="dupont2">
+            Colaboração com times internacionais.
+          </li>
+          <li data-i18n="dupont3">
+            Automação SAP + VBA acelerando processos.
+          </li>
+        </ul>
+      </article>
+
     </div>
+  </section>
 
-    <div class="card">
-      <h4>Generalist Programmer — Coca-Cola FEMSA (2019)</h4>
-      <ul>
-        <li data-i18n="coke1">Automação SAP R/3 utilizando VBA.</li>
-        <li data-i18n="coke2">Modelos NLP em Python para classificação de texto.</li>
-        <li data-i18n="coke3">Pipelines de dados para Power BI.</li>
-      </ul>
+  <!-- FOOTER -->
+  <footer class="footer reveal">
+    <div class="container">
+      <p>© 2026 Yves Nadjarian</p>
+      <p>
+        <a href="https://github.com/yvesnadjarian" target="_blank">GitHub</a> •
+        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+      </p>
     </div>
+  </footer>
 
-    <div class="card">
-      <h4>Master Data Coordinator — DuPont (2008–2014)</h4>
-      <ul>
-        <li data-i18n="dupont1">Análise e manutenção de dados SAP R/3.</li>
-        <li data-i18n="dupont2">Colaboração com equipes internacionais.</li>
-        <li data-i18n="dupont3">Automação SAP + VBA acelerando processos globais em até 5x.</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<footer class="footer">
-  © 2026 Yves Nadjarian
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
