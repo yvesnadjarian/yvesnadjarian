@@ -1,124 +1,15 @@
-:root {
-  --bg: #0b0f14;
-  --surface: #121826;
-  --card: #161d2d;
-  --text: #e6edf3;
-  --muted: #9aa4b2;
-  --accent: #4f46e5;
-  --accent-soft: rgba(79,70,229,0.15);
+/* LISTAS – EXPERIÊNCIA / SKILLS */
+ul {
+  margin-top: 0.75rem;
+  padding-left: 1.2rem;
 }
 
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  background: radial-gradient(circle at top, #111827, #05070c);
+li {
+  margin-bottom: 0.5rem;
   color: var(--text);
+  list-style-type: disc;
+}
+
+.timeline ul li {
   line-height: 1.6;
-}
-
-a { color: var(--accent); text-decoration: none; }
-
-.container {
-  width: min(1100px, 92%);
-  margin: auto;
-}
-
-.header {
-  position: sticky;
-  top: 0;
-  background: rgba(11,15,20,0.8);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid #1f2937;
-  z-index: 10;
-}
-
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 0;
-}
-
-.logo {
-  font-weight: 700;
-  letter-spacing: 3px;
-}
-
-.lang-btn {
-  background: none;
-  border: 1px solid var(--muted);
-  color: var(--text);
-  margin-left: .5rem;
-  cursor: pointer;
-}
-
-.hero {
-  padding: 5rem 0;
-}
-
-.hero h1 { font-size: 2.7rem; }
-.hero h2 { color: var(--accent); }
-
-.hero-actions .btn {
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-  padding: .7rem 1.2rem;
-  border-radius: 8px;
-  margin-right: .5rem;
-  margin-top: 1rem;
-}
-
-.btn.primary {
-  background: linear-gradient(135deg, var(--accent), #6366f1);
-  color: white;
-}
-
-.btn.outline {
-  border: 1px solid var(--accent);
-}
-
-.btn svg {
-  width: 18px;
-  fill: currentColor;
-}
-
-.section { padding: 4rem 0; }
-
-.card {
-  background: linear-gradient(180deg, var(--card), var(--surface));
-  border-radius: 14px;
-  padding: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,.3);
-}
-
-.timeline .card { margin-bottom: 1.5rem; }
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
-  gap: 1.2rem;
-}
-
-.edu-list {
-  list-style: none;
-}
-
-.footer {
-  text-align: center;
-  padding: 2rem 0;
-  color: var(--muted);
-}
-
-/* ANIMAÇÕES */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: .6s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
 }
