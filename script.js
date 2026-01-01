@@ -1,4 +1,30 @@
 const dict = {
+  pt: {
+    title: "Data Scientist & Business Intelligence Analyst",
+    summary: "Cientista de Dados focado em BI, Machine Learning, IA e automação.",
+    expTitle: "Experiência Profissional",
+
+    fast1: "Desenvolvimento de dashboards em Power BI utilizando DAX avançado.",
+    fast2: "Análise de dados de vendas com Machine Learning (Linear Regression, K-Means).",
+    fast3: "Aplicação de análise de reviews em áudio com transcrição e classificação automática.",
+    fast4: "Web scraping de dados do varejo utilizando Selenium.",
+
+    janssen1: "Criação de dashboards no Qlik Sense com foco estratégico.",
+    janssen2: "Tradução de necessidades do negócio em visualizações analíticas.",
+
+    bombril1: "Recrutado por ex-gestor devido a alto desempenho anterior.",
+    bombril2: "Automação SAP R/3 em larga escala.",
+    bombril3: "Redução do ciclo de atualização de relatórios de semanas para horas.",
+
+    coke1: "Automação SAP R/3 utilizando VBA.",
+    coke2: "Modelos NLP em Python para classificação de texto.",
+    coke3: "Pipelines de dados para Power BI.",
+
+    dupont1: "Análise e manutenção de dados SAP R/3.",
+    dupont2: "Colaboração com equipes internacionais.",
+    dupont3: "Automação SAP + VBA acelerando processos globais em até 5x."
+  },
+
   en: {
     title: "Data Scientist & Business Intelligence Analyst",
     summary: "Data Scientist focused on BI, Machine Learning, AI and automation.",
@@ -6,7 +32,7 @@ const dict = {
 
     fast1: "Developed Power BI dashboards using advanced DAX.",
     fast2: "Sales data analysis using Machine Learning (Linear Regression, K-Means).",
-    fast3: "Audio review analysis with transcription and automated classification.",
+    fast3: "Audio review analysis with automated transcription and classification.",
     fast4: "Retail market web scraping using Selenium.",
 
     janssen1: "Designed Qlik Sense dashboards with strategic focus.",
@@ -29,20 +55,31 @@ const dict = {
 function setLang(lang) {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.dataset.i18n;
+
+    // REGRA DE OURO: só sobrescreve se existir
     if (dict[lang] && dict[lang][key]) {
       el.textContent = dict[lang][key];
     }
   });
 }
 
-document.querySelectorAll(".lang-btn").forEach(btn => {
-  btn.onclick = () => setLang(btn.dataset.lang);
+document.addEventListener("DOMContentLoaded", () => {
+  setLang("pt");
+
+  document.querySelectorAll(".lang-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      setLang(btn.dataset.lang);
+    });
+  });
+
+  // Scroll animations
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add("active");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 });
-
-setLang("pt");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => e.isIntersecting && e.target.classList.add("active"));
-}, { threshold: 0.15 });
-
-document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
