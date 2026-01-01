@@ -1,15 +1,65 @@
-/* LISTAS – EXPERIÊNCIA / SKILLS */
+:root {
+  --bg: #0b0f14;
+  --card: #161d2d;
+  --text: #e6edf3;
+  --muted: #9aa4b2;
+  --accent: #4f46e5;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: auto;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background: rgba(11,15,20,.9);
+}
+
+.section { padding: 4rem 0; }
+
+.card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 14px;
+  margin-bottom: 1.5rem;
+}
+
 ul {
-  margin-top: 0.75rem;
-  padding-left: 1.2rem;
+  padding-left: 1.4rem;
+  margin-top: .75rem;
 }
 
 li {
-  margin-bottom: 0.5rem;
+  list-style: disc;
+  margin-bottom: .5rem;
   color: var(--text);
-  list-style-type: disc;
 }
 
-.timeline ul li {
-  line-height: 1.6;
+.btn {
+  padding: .7rem 1.2rem;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.btn.primary { background: var(--accent); color: #fff; }
+.btn.outline { border: 1px solid var(--accent); }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: .6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
