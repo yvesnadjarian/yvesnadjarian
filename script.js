@@ -55,8 +55,6 @@ const dict = {
 function setLang(lang) {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.dataset.i18n;
-
-    // REGRA DE OURO: só sobrescreve se existir
     if (dict[lang] && dict[lang][key]) {
       el.textContent = dict[lang][key];
     }
@@ -72,14 +70,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Scroll animations
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add("active");
+  // --- SCROLL ANIMATION (ROBUSTA) ---
+  const revealEls = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target); // anima uma vez só
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  // Observa todos
+  revealEls.forEach(el => observer.observe(el));
+
+  // Fallback: se já estiver visível no load
+  setTimeout(() => {
+    revealEls.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85) {
+        el.classList.add("active");
       }
     });
-  }, { threshold: 0.15 });
-
-  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  }, 50);
 });
